@@ -327,7 +327,7 @@ main {
   display: flex; }
   .all-task-wrap .all-task-open-container {
     padding: 4em 0; }
-    @media (min-width: 799px) {
+    @media (min-width: 1024px) {
       .all-task-wrap .all-task-open-container {
         display: -webkit-box;
         display: -webkit-flex;
@@ -503,8 +503,9 @@ main {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-          justify-content: flex-start; }
-  @media (min-width: 799px) {
+          justify-content: flex-start;
+  margin-top: 2em; }
+  @media (min-width: 1024px) {
     .container-completed {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
@@ -515,23 +516,25 @@ main {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
-              justify-content: flex-end; } }
+              justify-content: flex-end;
+      margin-top: none; } }
   .container-completed .completed-task {
     margin-left: 4em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 2em;
     color: #7cbb00;
     font-size: 1.6em; }
     .container-completed .completed-task span {
       display: block; }
-    .container-completed .completed-task .icon-star {
-      display: block;
+    .container-completed .completed-task .icon-star, .container-completed .completed-task .icon-warning {
+      display: inline-block;
       font-size: 1.8em;
       color: #7cbb00;
       margin-right: .6em; }
+    .container-completed .completed-task .icon-warning, .container-completed .completed-task .warning {
+      color: #f65314; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.83);

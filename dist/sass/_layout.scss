@@ -89,9 +89,9 @@ main{
 
 	.all-task-open-container{
 	padding: 4em 0;
-	@media (min-width: 799px){
+	@media (min-width: 1024px){
 		display: flex;
-		 flex-wrap: wrap;
+		flex-wrap: wrap;
 		justify-content: flex-start;
 		width: 100%;
 		
@@ -259,28 +259,32 @@ main{
 }
 .container-completed{
 	display: inline-flex;
-	@media (min-width: 799px){
+	@media (min-width: 1024px){
 	flex-direction: row-reverse;
 	width: auto;
 	justify-content:flex-end;
+	margin-top: none;
 	
 	}
 	justify-content: flex-start;	
-	
+	margin-top: 2em;
 	.completed-task{
 	margin-left: 4em;
 	display: flex;
-	margin-top: 2em;
+	
 	color: $successBg;
 	font-size: 1.6em;
 	span{
 		display: block;
 	}
-	.icon-star{
-		display: block;
+	.icon-star, .icon-warning{
+		display: inline-block;
 		font-size: 1.8em;
 		color: $successBg;
 		margin-right: .6em;
+	}
+	.icon-warning, .warning{
+		color: #f65314;
 	}
 }
 }
